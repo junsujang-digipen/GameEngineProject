@@ -67,7 +67,8 @@ void SceneManager::Update(double dt)
 void SceneManager::setNextScene(int i)
 {
 	if (scenes.find(i) == scenes.end()) {
-		//log error
+		std::cerr << "No " << i << "th scene exist" << std::endl;
+		return;
 	}
 	nextScene = scenes[i];
 }
